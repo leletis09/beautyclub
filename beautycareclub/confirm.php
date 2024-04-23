@@ -2,14 +2,16 @@
 
 include("conexao.php");
 	
-	$nome=$_POST['nome'];
-	$nome_usu=$_POST['nome_usu'];
+	$primeiro_nomee=$_POST['primeiro_nome'];
+	$sobrenome=$_POST['sobrenome'];
 	$email =  $_POST['email'];
-	$senha =  $_POST['senha'];
-	$conf_senha =  $_POST['conf_senha'];
-	
-	$sql="INSERT INTO tes(nome,  nome_usu, email, senha, conf_senha)
-	VALUES ('$nome', '$nome_usu', '$email', '$senha', '$conf_senha')";
+	$celular =  $_POST['celular'];
+	$senha_hash =  $_POST['senha_hash'];
+	$conf_senha_hash =  $_POST['conf_senha_hash'];
+	$genero =  $_POST['genero'];
+
+	$sql="INSERT INTO tes(primeiro_nome,  sobrenome, email, celular, senha_hash, conf_senha_hash, genero)
+	VALUES ('$primeiro_nome', '$sobrenome', '$email', '$celular', '$senha_hash', '$conf_senha_hash', '$genero')";
 	if(mysqli_query($conexao, $sql)){
 		header("Location: index.html");
 	}else{

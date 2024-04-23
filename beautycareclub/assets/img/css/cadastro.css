@@ -36,6 +36,17 @@ body {
     width: 31rem;
 }
 
+div i{
+    font-size: 15px;
+    cursor: pointer;
+
+    margin-top: 37px;
+    position: absolute;
+    right: 25%;
+    color: #424040;
+}
+
+
 .form {
     width: 50%;
     display: flex;
@@ -57,12 +68,13 @@ body {
     align-items: center;
 }
 
-.login-button button {
+.login-button input {
     border: none;
     background-color: #bf136f;
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    color: #FFF;
 }
 
 .login-button button:hover {

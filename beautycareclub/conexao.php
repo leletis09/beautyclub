@@ -2,7 +2,7 @@
     $servidor = "localhost";
     $usuario= "root";
     $senha="123456";
-    $dbname = "teste";
+    $dbname = "beauty";
 
     $conexao=mysqli_connect($servidor, $usuario, $senha, $dbname);
     if(!$conexao){
