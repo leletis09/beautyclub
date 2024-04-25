@@ -13,7 +13,7 @@
             <img src="assets/img/Logotipo_beauty_care-removebg-preview.png" alt="">
         </div>
             <div class="form">
-                <form action="conexao.php" method="post">
+                <form action="confirm.php" method="post" >
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastre-se</h1>
@@ -25,12 +25,12 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="firstname">Primeiro nome</label>
-                            <input type="text" name="primeiro_nome" id="firstname" placeholder="Digite seu primeiro nome" required>
+                            <input type="text" name="primeiro_nome" id="primeiro_nome" placeholder="Digite seu primeiro nome" required>
                         </div>
                         
                         <div class="input-box">
                             <label for="lastname">Sobrenome</label>
-                            <input type="text" name="sobrenome" id="lastname" placeholder="Digite seu sobrenome" required>
+                            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
                         </div>
 
                         <div class="input-box">
@@ -40,17 +40,18 @@
 
                         <div class="input-box">
                             <label for="number">Celular</label>
-                            <input type="tel" name="celular" id="number" placeholder="(xx) xxxx-xxxx" required>
+                            <input type="tel" name="celular" id="celular" placeholder="(xx) xxxx-xxxx" required>
                         </div>
 
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input type="password" name="senha_hash" id="password" placeholder="Digite sua senha" required>
+                            <input type="password" name="senha_hash" id="senha_hash" placeholder="Digite sua senha" required>
                             <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                         </div>
                         <div class="input-box">
                             <label for="Confirmpassword">Confirme sua senha</label>
-                            <input type="password" name="conf_senha_hash" id="Confirmpassword" placeholder="Digite sua senha" required>
+                            <input type="password" name="conf_senha_hash" id="conf_senha_hash" placeholder="Digite sua senha" required>
+                            <i class="bi bi-eye-fill" id="conf_btn-senha" onclick="mostrarSenha2()"></i>
                         </div>
                     </div>
                         <div class="gender-inputs">
@@ -60,22 +61,22 @@
 
                             <div class="gender-group">
                                 <div class="gender-input">
-                                    <input type="radio" name="genero" id="female">
+                                    <input type="radio" name="genero" value="F" required>
                                     <label for="female">Feminino</label>
                                 </div>
 
                                 <div class="gender-input">
-                                    <input type="radio" name="genero" id="male">
+                                    <input type="radio" name="genero" id="M" value="M">
                                     <label for="male">Masculino</label>
                             </div>
 
                             <div class="gender-input">
-                                <input type="radio" name="genero" id="others">
+                                <input type="radio" name="genero" id="O" value="O">
                                 <label for="others">Outros</label>
                             </div>
 
                              <div class="gender-input">
-                                 <input type="radio" name="genero" id="Prefiro">
+                                 <input type="radio" name="genero" id="P" value="P">
                                  <label for="Prefiro">Prefiro não dizer</label>
                             </div>
                             </div>
@@ -91,3 +92,18 @@
 </body>
 </html>
 
+
+
+<!-- create database beauty;
+use beauty;
+
+CREATE TABLE cadastros (
+    id_usu INT AUTO_INCREMENT PRIMARY KEY,
+    primeiro_nome VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    celular varchar(15) NOT NULL UNIQUE,
+    senha_hash VARCHAR(255) NOT NULL,
+    conf_senha_hash VARCHAR(255) NOT NULL,
+    genero CHAR(15) NOT NULL
+); -->
