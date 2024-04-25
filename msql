@@ -1,0 +1,17 @@
+
+create database beauty;
+use beauty;
+
+CREATE TABLE cadastros (
+    id_usu INT AUTO_INCREMENT PRIMARY KEY,
+    primeiro_nome VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    celular varchar(15) NOT NULL UNIQUE,
+    senha_hash VARCHAR(255) NOT NULL,
+    conf_senha_hash VARCHAR(255) NOT NULL,
+    genero CHAR(15) NOT NULL
+);
+drop table cadastros;
+select * from cadastros;
+
